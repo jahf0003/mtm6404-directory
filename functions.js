@@ -18,3 +18,7 @@ function total(clients) {
     return clients.reduce((sum, client) => sum + client.balance, 0);
 }
 
+// Find client by index
+function info(index) {
+    return clients.find((client) => client.index === index);
+}
