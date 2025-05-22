@@ -6,3 +6,15 @@ function list(clients) {
         </li>
     `).join(''); 
 }
+
+// Sorting clients by property (name, balance, index)
+
+function order(clients, property) {
+    return clients.sort((a, b) => (a[property] > b[property]) ? 1 : -1);
+}
+
+// Calculate total balance of all clients
+function total(clients) {
+    return clients.reduce((sum, client) => sum + client.balance, 0);
+}
+
