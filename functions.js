@@ -22,3 +22,9 @@ function total(clients) {
 function info(index) {
     return clients.find((client) => client.index === index);
 }
+
+// Search clients by name (case-insensitive)
+function search(query) {
+    const lowerCaseQuery = query.toLowerCase();
+    return clients.filter(client => client.name.toLowerCase().includes(lowerCaseQuery));
+}
